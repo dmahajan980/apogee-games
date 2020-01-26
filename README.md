@@ -6,15 +6,15 @@ This repository contains the files relevant to the front-end of the gaming event
 apogee-games/
   └── index.html
   └── css/
-      └── index.css
-      ...
+        └── index.css
+        ...
   └── js/
-      └── script.js
-      ...
+        └── script.js
+        ...
   └── games/
-      └── game-one.html
-      ...
+        └── game-one.html
+        ...
   └── assets/
-      └── fonts/
-      └── images/
+        └── fonts/
+        └── images/
 ```
