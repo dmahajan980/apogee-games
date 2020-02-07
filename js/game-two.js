@@ -8,7 +8,7 @@
  * do proper ghost mechanics (blinky/wimpy etc)
  */
 
-var NONE        = 4,/*jslint browser: true, undef: true, eqeqeq: true, nomen: true, white: true */
+/*jslint browser: true, undef: true, eqeqeq: true, nomen: true, white: true */
 /*global window: false, document: false */
 
 /*
@@ -1070,12 +1070,12 @@ var PACMAN = (function() {
         var extension = Modernizr.audio.ogg ? 'ogg' : 'mp3';
 
         var audio_files = [
-            ["start", root + "audio/opening_song." + extension],
-            ["die", root + "audio/die." + extension],
-            ["eatghost", root + "audio/eatghost." + extension],
-            ["eatpill", root + "audio/eatpill." + extension],
-            ["eating", root + "audio/eating.short." + extension],
-            ["eating2", root + "audio/eating.short." + extension]
+            ["start", root + "../assets/audio/opening_song." + extension],
+            ["die", root + "../assets/audio/die." + extension],
+            ["eatghost", root + "../assets/audio/eatghost." + extension],
+            ["eatpill", root + "../assets/audio/eatpill." + extension],
+            ["eating", root + "../assets/audio/eating.short." + extension],
+            ["eating2", root + "../assets/audio/eating.short." + extension]
         ];
 
         load(audio_files, function() { loaded(); });
