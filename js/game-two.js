@@ -843,11 +843,18 @@ var PACMAN = (function() {
         map.draw(ctx);
         startLevel();
     }
+    document.getElementById ("pacman").addEventListener ("click", newGame, false);
+    function newGame() {
+        setState(WAITING);
+        level = 1;
+        user.reset();
+        map.reset();
+        map.draw(ctx);
+        startLevel();
+    } 
 
     function keyDown(e) {
-        if (e.keyCode === KEY.N) {
-            startNewGame();
-        } else if (e.keyCode === KEY.S) {
+        if (e.keyCode === KEY.S) {
             audio.disableSound();
             localStorage["soundDisabled"] = !soundDisabled();
         } else if (e.keyCode === KEY.P && state === PAUSE) {
