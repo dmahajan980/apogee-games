@@ -1,60 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-<div class="wrapper">
-	
-	<header>
-		<h1>Whack-a-Mole</h1>
-		<div class="score-box" id="score-box">
-			<h2>Score</h2>
-			<p class="score-out" id="score-out">0</p>
-		</div><!-- end score-box -->
-	</header>
-	<main>
-		<button class="btn-start" id="btn-start">Start Game</button>
-		<div class="game-container">
-			<div class="row">
-				<div class="box">
-					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-01">
-					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-					<div class="mask"></div><!-- end mask -->
-				</div><!-- end box -->
-				<div class="box">
-					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic"
-					id="mole-02">
-					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-					<div class="mask"></div><!-- end mask -->
-				</div><!-- end box -->
-				<div class="box">
-					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic"
-					id="mole-03">
-					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-					<div class="mask"></div><!-- end mask -->
-				</div><!-- end box -->
-			</div><!-- end row -->
-			<div class="row">
-				<div class="box">
-					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-04">
-					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-					<div class="mask"></div><!-- end mask -->
-				</div><!-- end box -->
-				<div class="box">
-					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-05">
-					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-					<div class="mask"></div><!-- end mask -->
-				</div><!-- end box -->
-				<div class="box">
-					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-06">
-					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-					<div class="mask"></div><!-- end mask -->
-				</div><!-- end box -->
-			</div><!-- end row -->
-		</div><!-- end game-container -->
-	</main>
-</div><!-- end wrapper -->
-</body>
+    <head>
+        <title>Pacman</title>
+        <link href="../css/game-two.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="shim">shim for font face</div>
+
+        <h1>HTML5 Pacman</h1>
+
+        <p>
+            <a href="https://github.com/daleharvey/pacman" target="_blank">Credits: https://github.com/daleharvey/pacman</a>
+        </p>
+
+        <div id="pacman"></div>
+        <script src="../js/game-two.js"></script>
+  <script>
+
+    var el = document.getElementById("pacman");
+
+    if (Modernizr.canvas && Modernizr.localstorage && 
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+    } else { 
+      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+    }
+  </script>
+    </body>
 </html>

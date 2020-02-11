@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pacman</title>
-        <link href="stylesheet1.css" rel="stylesheet" type="css/text">
-        <script src="script1.js"></script>
-    </head>
-    <body>
-        <div id="shim">shim for font face</div>
-        <h1>HTML5 Pacman</h1>
-        <div id="pacman"></div>
-    </body>
+<head>
+    <link rel="stylesheet" href="../css/game-one.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrapper">
+	
+	<header>
+		<h1>Whack-a-Mole</h1>
+		<div class="score-box" id="score-box">
+			<h2>Score</h2>
+			<p class="score-out" id="score-out">0</p>
+		</div><!-- end score-box -->
+	</header>
+	<main>
+		<button class="btn-start" id="btn-start">Start Game</button>
+		<div class="game-container">
+			<div class="row">
+				<div class="box">
+					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-01">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic"
+					id="mole-02">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic"
+					id="mole-03">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+			</div><!-- end row -->
+			<div class="row">
+				<div class="box">
+					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-04">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-05">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="https://res.michaelwhyte.ca/mole.png" alt="mole" class="mole-pic" id="mole-06">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+			</div><!-- end row -->
+		</div><!-- end game-container -->
+	</main>
+</div><!-- end wrapper -->
+<script src="../js/game-one.js"></script>
+</body>
 </html>
