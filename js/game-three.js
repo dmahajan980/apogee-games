@@ -50,14 +50,13 @@ function drawPillar(x, depth, gap=100, color="#FF4500"){
 
 
 }
-
 function drawPlayer(){
 
 	ctx.drawImage(player.img, player.x, player.y, 60, 60);
 	player.y += player.acc;
-	player.acc += 0.2;
+	player.acc += 0.1;
 
-	if(player.acc > 6)
+	if(player.acc > 2.5)
 		player.img = document.getElementById("image");
 
 }
@@ -79,7 +78,7 @@ function playerCollision(){
 
 function playerJump(){
 
-	player.acc = -8;
+	player.acc = -3;
 	player.img = document.getElementById("rotatedImage");
 
 }
@@ -132,12 +131,7 @@ window.onkeydown = function(event) {
 	}
 }
 
-window.addEventListener('touchstart', function onFirstTouch() {
-
-	playerJump();
-  // we only need to know once that a human touched the screen, so we can stop listening now
-  //window.removeEventListener('touchstart', onFirstTouch, false);
-}, false);
+window.addEventListener('click', playerJump, false);
 
 var lastTime = 0, cutOffTime=0;
 function gameLoop(time=0){
